@@ -28,29 +28,17 @@ AccuKnox's cloud-native application protection platform is a single tool that pr
 
 ## AccuKnox Product Set
 
-### CNAPP
+CNAPP - Multi-cloud, hybrid cloud security with detailed telemetry for auditing and container forensics.
 
-Multi-cloud, hybrid cloud security with detailed telemetry for auditing and container forensics.
+CWPP - Automated zero-trust policy generation with customizable policy control and reduced alert fatigue.
 
-### CWPP
+CSPM - Visibility and orchestration of multi-cloud resources with continuous compliance and auditing.
 
-Automated zero-trust policy generation with customizable policy control and reduced alert fatigue.
+KSPM - Container-level visibility with unique in-line mitigation enforcement to prevent zero-day attacks.
 
-### CSPM
+IoT/Edge - Deep visibility and monitoring with automated zero-trust policy discovery and enforcement.
 
-Visibility and orchestration of multi-cloud resources with continuous compliance and auditing.
-
-### KSPM
-
-Container-level visibility with unique in-line mitigation enforcement to prevent zero-day attacks.
-
-### IoT/Edge
-
-Deep visibility and monitoring with automated zero-trust policy discovery and enforcement.
-
-### 5G Security
-
-Hardening of 5G control planes and secure microsegmentation of network and application traffic.
+5G Security - Hardening of 5G control planes and secure microsegmentation of network and application traffic.
 
 ## Security Layers
 
