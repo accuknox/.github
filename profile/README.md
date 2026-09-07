@@ -1,78 +1,161 @@
-# AccuKnox Zero Trust Enterprise CNAPP 🛡️
+<div align="center">
 
-Welcome to the AccuKnox Enterprise CNAPP Suite, your comprehensive solution for cloud-native application protection. AccuKnox is designed to offer end-to-end security throughout the software development lifecycle, integrating various security measures to ensure robust defense across all deployment phases.
+# AccuKnox — Zero Trust CNAPP for the AI Era
 
+**Runtime-first cloud, application, API, and AI security, built on eBPF and KubeArmor.**
 
-## Cloud-Native Deployment Challenges
+[Website](https://www.accuknox.com) · [Docs](https://help.accuknox.com) · [Schedule a Demo](https://www.accuknox.com/contact-us) · [Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=seller-yzcds4cyvvvpe)
 
-In cloud-native deployments, security challenges can arise at different stages -
+![GitHub org](https://img.shields.io/badge/org-accuknox-blue?style=flat-square)
+![KubeArmor](https://img.shields.io/github/stars/kubearmor/kubearmor?label=KubeArmor%20stars&style=flat-square)
+![Compliance](https://img.shields.io/badge/compliance%20frameworks-45%2B-success?style=flat-square)
+![Integrations](https://img.shields.io/badge/integrations-30%2B-success?style=flat-square)
 
-1. **Code-Building Phase**: Issues like vulnerable code, insecure configurations, and hardcoded secrets.
+</div>
 
-2. **Deploying Phase**: Problems with malicious images, image poisoning, and insecure CI/CD pipelines.
+---
 
-3. **Final Phase**: Runtime security threats such as zero-day attacks, crypto-mining, data exfiltrations, and undetected malware.
+## What AccuKnox does
 
-![Code to Cloud](https://lh7-us.googleusercontent.com/docsz/AD_4nXeSIRdj2E2dlJ3LhIsY8_IYcOTopZUHU82u1ylfwW3ox5bP0_MVaE234HjjMzBRLUwylKuLGX4-ZqEYLYB3RLXy2nDoH2xOqX6PcwyEpK4kX8TFf8i1A4m_ZBtNGmZSaBwW1-nXvNf9aaNq_C-bO3YbDirF?key=pfdZ2-A2YEK09WaRLhfqlg)
+Most CNAPP tools stop at posture scanning. They find the misconfiguration and leave the fix to you. AccuKnox blocks the attack at runtime, in the kernel, using eBPF and Linux Security Modules (AppArmor, BPF-LSM, SELinux) through our open source engine, [KubeArmor](https://github.com/kubearmor/KubeArmor).
 
-## AccuKnox Solution
+One platform covers cloud, container, Kubernetes, application, API, and AI workloads, on any cloud, on-prem, or air-gapped. Zero Trust policies enforce "never trust, always verify" instead of alerting after the fact. Runtime blocking runs under 1% CPU overhead.
 
-AccuKnox's Cloud Native Application Protection Platform (CNAPP) is a unified solution that integrates various tools to provide comprehensive security from development to production. In the cloud-native deployment phases, there can be many security issues like vulnerable code, Insecure configurations, and Hardcoded secrets in the code-building phase. In the deploying phase, there can be issues with malicious images, image poisoning, insecure CI/CD pipelines, etc. In the final phase, there can be issues like runtime security issues like zero-day attacks, Crypto mining data exfiltrations, malware, and vulnerabilities that are still left out un-detected, etc.
+A DevSecOps team running 18,000+ assets across GCP, VMs, and Kubernetes cut alert noise by 85% after switching from a legacy CNAPP. A 200+ account financial services customer cut quarterly audit prep from 60 hours to under 5.
 
-Multiple tools are available to provide security at various stages of the software development life cycle. However, using these tools at different stages becomes difficult as there is no common connectivity between these tools to get reports and findings. Hence, we need a single tool that provides end-to-end solutions for cloud security, from the development to the production process. The Cloud Native Application Protection Platform tool, which is a one-stop solution that integrates various results and normalizes or correlates the findings to provide complete security to cloud resources, has become the need of the hour.
+---
 
-AccuKnox's cloud-native application protection platform is a single tool that provides both static and dynamic security. AccuKnox Enterprise Architecture consists of various microservices, like the vault for secret management, MongoDB for database-related connections, and an API gateway. The AccuKnox CSPM tool scans the infrastructure and stores the scan data in the S3 bucket, either created by AccuKnox or the S3 bucket created by the customer. It combines static and dynamic security measures and supports integration with CI/CD pipelines and SIEM tools like Jira, Slack, Splunk, and Rsyslog.
+## The platform, by domain
 
-![image](https://github.com/accuknox/.github/assets/68660002/acf010de-27c1-454f-98f2-a2ae6801ea6e)
+<table>
+<tr>
+<td width="33%">
 
+### Cloud Security (CSPM)
+Misconfiguration detection and drift prevention across AWS, Azure, GCP, and Oracle Cloud.
 
-## AccuKnox Product Set
+</td>
+<td width="33%">
 
-CNAPP - Multi-cloud, hybrid cloud security with detailed telemetry for auditing and container forensics.
+### Workload Security (CWPP)
+Runtime protection for VMs, containers, and serverless, with automated zero-trust policy generation.
 
-CWPP - Automated zero-trust policy generation with customizable policy control and reduced alert fatigue.
+</td>
+<td width="33%">
 
-CSPM - Visibility and orchestration of multi-cloud resources with continuous compliance and auditing.
+### Kubernetes Security (KSPM)
+Cluster-level posture plus in-line enforcement that stops zero-day attacks before they spread.
 
-KSPM - Container-level visibility with unique in-line mitigation enforcement to prevent zero-day attacks.
+</td>
+</tr>
+<tr>
+<td width="33%">
 
-IoT/Edge - Deep visibility and monitoring with automated zero-trust policy discovery and enforcement.
+### Application Security (ASPM)
+Shift-left scanning (SAST, SCA, DAST) tied to runtime context, so teams fix what's actually exploitable.
 
-5G Security - Hardening of 5G control planes and secure microsegmentation of network and application traffic.
+</td>
+<td width="33%">
 
-## Security Layers
+### API Security
+Finds broken access control, broken auth, and injection flaws across every exposed API.
 
-* Identity Management
-    * Cloud Identity and Entitlement Management (CIEM)
-    * Kubernetes Identity and Entitlement Management (KIEM)
+</td>
+<td width="33%">
 
-* Static Security
-    * Cloud Security Posture Management (CSPM)
+### AI and LLM Security
+Discovers, scans, and sandboxes every model, agent, and prompt path. See the AI Security 2.0 section below.
 
-* Run-time Security
-    * Cloud Workload Protection Platform (CWPP)
+</td>
+</tr>
+<tr>
+<td width="33%">
 
-## Unique Capabilities
+### Data Security (DSPM)
+Tracks sensitive data exposure, uncontrolled access, and exfiltration paths across cloud and AI stores.
 
-* Zero-Trust Security implements allow-based policies to ensure that only specific actions are permitted, following the principle of "never trust, always verify."
+</td>
+<td width="33%">
 
-* Multi-Cloud Coverage for a consolidated dashboard and asset inventory across multiple cloud accounts.
+### Identity (CIEM / KIEM)
+Cloud and Kubernetes identity and entitlement management, built to kill excessive standing permissions.
 
-* Multi-tool integration for a unified risk assessment view across cloud, container, cluster, and code assets (4C coverage).
+</td>
+<td width="33%">
 
-* Inline Mitigation prevents attacks in real-time using advanced Linux Security Modules (LSMs) like AppArmor, BPF-LSM, and SELinux.
+### Supply Chain (SBOM)
+Generates SBOM, HBOM, AIBOM, CBOM, and QBOM, with VEX and CSAF support for audit-ready provenance.
 
-* Agent-Based and Agentless Scanning supports both methods for comprehensive infrastructure security.
+</td>
+</tr>
+<tr>
+<td width="33%">
 
-* Shift Left Defense allows proactive thwarting of advanced "Zero Day" attacks by addressing security issues early in the development phase.
+### Secrets Manager
+Detects and blocks leaked API keys, passwords, and credentials before they leave the environment.
 
-* Real-Time Protection with real-time defense mechanisms against zero-day attacks.
+</td>
+<td width="33%">
 
-* Integrated Testing to incorporate Static Application Security Testing (SAST), Software Composition Analysis (SCA), and Dynamic Application Security Testing (DAST).
+### Compliance and Governance
+45+ frameworks mapped and continuously audited, including HIPAA, GDPR, SOC 2, ISO 27001, and FedRAMP.
 
-## Compliance
+</td>
+<td width="33%">
 
-AccuKnox's CNAPP supports over 30 compliance frameworks, including HIPAA, GDPR, SOC2, ISO 27001, and more, ensuring adherence to a wide range of industry standards and regulations. We guarantee a robust, unified approach to cloud security that spans all stages of the development lifecycle, providing peace of mind and comprehensive protection against emerging threats.
+### Detection and Response (CDR)
+Correlates findings across cloud, container, cluster, and code (4C coverage) into one investigation.
 
-- - -
-[SCHEDULE DEMO](https://www.accuknox.com/contact-us)
+</td>
+</tr>
+</table>
+
+---
+
+## AI Security 2.0
+
+Launched at RSA 2026. Eight modules, built on the open standards SPIFFE and OpenFGA, integrated with Amazon Bedrock, Gemini, Ollama, and vLLM.
+
+| Module | What it does |
+|---|---|
+| **AI Security Posture Management (AI-SPM)** | Live, agentless inventory of every model in use |
+| **Agentic AI Security** | Sandboxes every AI agent at the kernel level with eBPF and LSM |
+| **AI Detect & Respond (AI-DR)** | Reconstructs attack chains across prompts and tool calls |
+| **AI Guardrails, Stateful Prompt Firewall** | Filters, audits, and blocks malicious LLM prompts and responses |
+| **AI Red Teaming & Pen Testing** | Runs automated adversarial tests for prompt injection, hallucination, and toxicity |
+| **AI Identity Security** | Scopes permissions per agent and kills standing credentials |
+| **AI Model & Dataset Security** | Scans 5 model formats for backdoors and unsafe code |
+| **AI Compliance & Governance (AI-GRC)** | Assigns an EU AI Act risk tier instantly, mapped to your controls |
+
+A healthcare AI customer cut PII leak risk by 85% under HIPAA. An AI workload customer cut data leakage risk by 85% after deploying AI-SPM.
+
+---
+
+## Deploy anywhere
+
+| Environment | Coverage |
+|---|---|
+| Public cloud | AWS, Azure, GCP, Oracle Cloud |
+| Private cloud | OpenStack, OpenShift, VMware, Nutanix |
+| On-premise and air-gapped | Full CNAPP stack, no external dependency |
+| Edge and IoT | 89% uptime in production telecom deployments |
+| AI and LLM assets | Hugging Face, OpenAI, TensorFlow, Ollama, managed and private models |
+
+---
+
+## Open source
+
+- **[KubeArmor](https://github.com/kubearmor/KubeArmor)** — runtime security enforcement engine for containers, VMs, and nodes, built on eBPF and LSM. CNCF project, 1M+ downloads.
+- **[ModelArmor](https://github.com/accuknox/ModelArmor)** — open source runtime sandboxing for LLM and ML workloads. CNCF project.
+
+---
+
+## Company
+
+Incubated at SRI International (Stanford Research Institute). Backed by National Grid Partners, Dolby Family Ventures, Dreamit Ventures, Avanta Ventures, 5G Open Innovation Lab, and NVIDIA. Distributed through TD SYNNEX in North America and Carahsoft for the federal channel. Listed on AWS, Azure, Red Hat, and Oracle Cloud marketplaces.
+
+<div align="center">
+
+**[Explore our repositories below](https://github.com/orgs/accuknox/repositories)** · **[Talk to Security Experts](https://www.accuknox.com/contact-us)**
+
+</div>
